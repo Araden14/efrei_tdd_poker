@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { evaluateHand } from './poker';
+import { evaluateHand } from './handEvaluator';
 
 describe('evaluateHand', () => {
   it('should detect a high card hand', () => {
