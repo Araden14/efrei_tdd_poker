@@ -1,12 +1,3 @@
-interface Card {
-    suit: string;
-    rank: string;
-}
-
-interface HandResult {
-    category: string;
-    chosen5: string[];
-}
 
 const RANK_ORDER = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 

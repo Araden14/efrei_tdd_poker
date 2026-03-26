@@ -1,14 +1,5 @@
 import { rankValue } from './handEvaluator';
 
-interface HandResult {
-    category: string;
-    chosen5: string[];
-}
-
-interface CompareResult {
-    winners: number[];
-}
-
 const CATEGORY_RANK: string[] = [
     'High card',
     'One pair',
