@@ -1,3 +1,4 @@
+import { Card, HandResult } from './types';
 
 const RANK_ORDER = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 

@@ -1,4 +1,5 @@
 import { rankValue } from './handEvaluator';
+import { HandResult, CompareResult } from './types';
 
 const CATEGORY_RANK: string[] = [
     'High card',
