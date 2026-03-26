@@ -44,7 +44,7 @@ function findFlushCards(cards: Card[]): Card[] | null {
     for (const [, group] of suitCounts) {
         if (group.length >= 5) {
             group.sort((a, b) => rankValue(b.rank) - rankValue(a.rank));
-            return group.slice(0, 5);
+            return group
         }
     }
     return null;
@@ -134,7 +134,7 @@ export function evaluate(cards: Card[]): HandResult {
     if (flushCards) {
         return {
             category: 'Flush',
-            chosen5: flushCards.map(cardToString),
+            chosen5: flushCards.slice(0, 5).map(cardToString),
         };
     }
 

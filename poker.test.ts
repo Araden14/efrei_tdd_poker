@@ -101,6 +101,16 @@ describe("evaluateHand", () => {
     expect(result.chosen5).toEqual(["9h", "8h", "7h", "6h", "5h"]);
   });
 
+  it("should detect straight flush when top 5 flush cards don't form a straight", () => {
+    const board = ["Ah", "Kh", "7h", "6h", "5h"];
+    const hole = ["4h", "3h"];
+
+    const result = evaluateHand(board, hole);
+
+    expect(result.category).toBe("Straight flush");
+    expect(result.chosen5).toEqual(["7h", "6h", "5h", "4h", "3h"]);
+  });
+
   it("should pick best 5 from 6 suited cards (best-of-7 flush)", () => {
     const board = ["Ah", "Jh", "9h", "4h", "3h"];
     const hole = ["6h", "Kd"];
