@@ -92,4 +92,15 @@ describe('compareHands', () => {
     const result = compareHands([hand1, hand2]);
     expect(result.winners).toEqual([0]);
   });
+
+  // Split/tie: board plays — both players use the board's straight (Example D)
+  it('split pot when both players have identical best hand', () => {
+    const board: string[] = ['5c', '6d', '7h', '8s', '9d'];
+    const hand1 = evaluateHand(board, ['Ac', 'Ad']); // best hand is board's straight
+    const hand2 = evaluateHand(board, ['Kc', 'Qd']); // best hand is board's straight
+    expect(hand1.category).toBe('Straight');
+    expect(hand2.category).toBe('Straight');
+    const result = compareHands([hand1, hand2]);
+    expect(result.winners).toEqual([0, 1]);
+  });
 });
