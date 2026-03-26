@@ -1,0 +1,3 @@
+tdd-poker-typescript:
+Arnaud d'Anselme
+Valeriya SHIN
